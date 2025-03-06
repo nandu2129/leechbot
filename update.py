@@ -10,7 +10,7 @@ if ospath.exists('log.txt'):
     with open('log.txt', 'r+') as f:
         f.truncate(0)
 
-if ospath.exists('rlog.txt'):
+if ospath.exists('-1002292407178'):
     remove('rlog.txt')
 
 basicConfig(format="[%(asctime)s] [%(levelname)s] - %(message)s",
@@ -21,22 +21,22 @@ basicConfig(format="[%(asctime)s] [%(levelname)s] - %(message)s",
 load_dotenv('config.env', override=True)
 
 try:
-    if bool(environ.get('_____REMOVE_THIS_LINE_____')):
+    if bool(environ.get('-1002292407178')):
         log_error('The README.md file there to be read! Exiting now!')
         exit()
 except:
     pass
 
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('7702245460:AAFJGQGQzrIqlWn8d0URHh1ZiGIYRPXVeSs', '')
 if len(BOT_TOKEN) == 0:
     log_error("BOT_TOKEN variable is missing! Exiting now")
     exit(1)
 
-bot_id = BOT_TOKEN.split(':', 1)[0]
+bot_id = BOT_TOKEN.split('7702245460', 1)[0]
 
-DATABASE_URL = environ.get('DATABASE_URL', '')
+DATABASE_URL = environ.get('DATABASE_URL'mongodb+srv://vaddenandu70:<Nandu2580>@nandubots.omnod.mongodb.net/?retryWrites=true&w=majority&appName=NanduBots '')
 if len(DATABASE_URL) == 0:
-    DATABASE_URL = None
+    DATABASE_URL = NanduBots
 
 if DATABASE_URL is not None:
     conn = MongoClient(DATABASE_URL)
